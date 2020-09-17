@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="@color/colorPrimaryDark">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatCount="1"
+        app:lottie_repeatMode="restart"
+        app:lottie_rawRes="@raw/load"/>
+
+    <TextView
+        android:id="@+id/splashText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_run_text"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:layout_below="@+id/loadAnimation"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/splashButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_below="@+id/splashText1"
+        android:layout_centerHorizontal="true"
+        android:text="GO AHEAD"
+        android:textColor="@android:color/white"
+        app:strokeColor="@android:color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <color name="colorPrimary">#4E4678</color>
+    <color name="colorPrimaryDark">#342B63</color>
+    <color name="colorAccent">#DA7903</color>
+
+    <color name="toastWarning">#FFCA28</color>
+    <color name="toastError">#EF5350</color>
+    <color name="toastSuccess">#66BB6A</color>
+    <color app:override="true" name="mtrl_textinput_default_box_stroke_color">@android:color/secondary_text_dark</color>
+</resources>

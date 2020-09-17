@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rest Api</string>
+    <string name="first_run_text">Thank you for using my aplication\nThis is your first run\nplease wait...</string>
+</resources>

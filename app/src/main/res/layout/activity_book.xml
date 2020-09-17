@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".menu.Book">
+
+    <TextView
+        android:id="@+id/bookAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/bookSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/MySpinner"
+        android:layout_below="@+id/bookAddress"
+        android:layout_marginTop="8dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/bookSpinner"
+        android:layout_toStartOf="@+id/bookSendBtn"
+        app:errorEnabled="true"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        android:textColorHint="@android:color/secondary_text_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bookPath"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textUri"
+            android:hint="path"
+            android:textColor="@android:color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bookSendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/menuLayout1"
+        android:layout_alignBottom="@+id/menuLayout1"
+        android:text="SEND"
+        android:layout_below="@id/menuLayout1"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/menuLayout1"/>
+    <TextView
+        android:id="@+id/bookTextTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookRV"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>

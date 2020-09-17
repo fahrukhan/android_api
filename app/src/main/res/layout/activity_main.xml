@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mainEditLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:errorEnabled="true"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        android:textColorHint="@android:color/secondary_text_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mainIPAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789."
+            android:hint="IP Address"
+            android:textColor="@android:color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mainEditLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainEditLayout1"
+        app:errorEnabled="true"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="@color/colorPrimaryDark"
+        app:boxStrokeColor="@color/colorAccent"
+        app:hintTextColor="@color/colorAccent"
+        android:textColorHint="@android:color/secondary_text_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mainPort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:hint="Port"
+            android:textColor="@android:color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <CheckBox
+        android:id="@+id/mainCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainEditLayout2"
+        android:text="Remember IP"
+        android:textColor="@android:color/white"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mainConnectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/mainCB"
+        android:layout_alignParentStart="true"
+        android:text="CONNECT"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/mainLoader"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/loader"/>
+
+    <TextView
+        android:id="@+id/mainTextWait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:text="Please Wait..."
+        android:visibility="gone"
+        android:layout_below="@id/mainLoader"/>
+
+</RelativeLayout>
